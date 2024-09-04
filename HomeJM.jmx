@@ -6,6 +6,8 @@
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
         <collectionProp name="Arguments.arguments"/>
       </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
@@ -52,7 +54,7 @@
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Create Group">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Create Group" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -118,7 +120,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Open Groups List">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Open Groups List" enabled="true">
             <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
             <stringProp name="HTTPSampler.path">group.php</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -136,7 +138,7 @@
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on the [Add New] button">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on the [Add New] button" enabled="true">
             <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
             <stringProp name="HTTPSampler.path">edit.php</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -149,7 +151,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on the [Next] button">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on the [Next] button" enabled="true">
             <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
             <stringProp name="HTTPSampler.path">edit.php</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -177,7 +179,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on the [Enter] button">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on the [Enter] button" enabled="true">
             <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
             <stringProp name="HTTPSampler.path">edit.php</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -260,10 +262,23 @@
           </HTTPSamplerProxy>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Users added">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Users added" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Open Home List">
+            <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
+            <stringProp name="HTTPSampler.path">group.php</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on the [Copy to] button">
             <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
             <stringProp name="HTTPSampler.path">group.php</stringProp>
@@ -305,11 +320,36 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Redirect to the Home Page">
+            <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Filter Group">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Filter Group" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Open Home List">
+            <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
+            <stringProp name="HTTPSampler.path">group.php</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click Filter">
             <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
             <stringProp name="HTTPSampler.path">?group=TestGroup</stringProp>
@@ -331,12 +371,37 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Redirect to the Home Page">
+            <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Edit Contact">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Edit Contact" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on the [Change] button">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Open Home List">
+            <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
+            <stringProp name="HTTPSampler.path">group.php</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on the [Change] button" enabled="true">
             <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
             <stringProp name="HTTPSampler.path">edit.php?group=TestGroup&amp;id=2</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -364,7 +429,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on the [Refresh] button">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on the [Refresh] button" enabled="true">
             <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
             <stringProp name="HTTPSampler.path">edit.php?group=TestGroup</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -406,7 +471,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Redirect to the Home Page">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Redirect to the Home Page" enabled="true">
             <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -419,11 +484,24 @@
           </HTTPSamplerProxy>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Delete Contact">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Delete Contact" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on the [Delete] button">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Open Home List">
+            <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
+            <stringProp name="HTTPSampler.path">group.php</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on the [Delete] button" enabled="true">
             <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
             <stringProp name="HTTPSampler.path">delete.php?part=2;</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -444,7 +522,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Redirect to the Home Page">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Redirect to the Home Page" enabled="true">
             <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -457,11 +535,11 @@
           </HTTPSamplerProxy>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Delete Group(s)">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Delete Group(s)" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Open Groups List">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Open Groups List" enabled="true">
             <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
             <stringProp name="HTTPSampler.path">group.php</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -474,7 +552,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on the [Delete] button">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on the [Delete] button" enabled="true">
             <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
             <stringProp name="HTTPSampler.path">group.php</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -502,7 +580,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Open Groups List">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Open Groups List" enabled="true">
             <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
             <stringProp name="HTTPSampler.path">group.php</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -516,11 +594,11 @@
           </HTTPSamplerProxy>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Logout">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Logout" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on the [logout] button">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on the [logout] button" enabled="true">
             <stringProp name="HTTPSampler.domain">phpaddressbook.by</stringProp>
             <stringProp name="HTTPSampler.path">group.php</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
